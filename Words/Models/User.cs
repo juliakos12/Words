@@ -8,9 +8,7 @@
         public string Password { get; set; }
         public List<Language> Languages { get; set; }
 
-        public List<Group> Groups { get; set; }
-
-        public User(Guid id, string name, string login, string password, List<Language> languages, List<Group> groups)
+        public User(Guid id, string name, string login, string password, List<Language> languages)
         {
             Id = id;
             Name = name;
