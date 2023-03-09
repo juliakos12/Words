@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace words.Models
+﻿namespace words.Models
 {
     internal class Word
     {
@@ -12,18 +6,20 @@ namespace words.Models
         public string Title { get; set; }
         public string Translation { get; set; }
         public float Level { get; set; }
+        public string Example { get; set; }
 
-        public Word(Guid id, string title, string translation, float level)
+        public Word(Guid id, string title, string translation, float level, string example)
         {
             Id = id;
             Title = title;
             Translation = translation;
             Level = level;
+            Example = example;
         }
 
         public override string ToString()
         {
-            return $"{Title} - {Translation}";
+            return $"{Title} - {Translation} : {Level}%";
         }
     }
 }
